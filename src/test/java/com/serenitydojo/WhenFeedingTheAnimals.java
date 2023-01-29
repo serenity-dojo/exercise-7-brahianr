@@ -11,7 +11,7 @@ public class WhenFeedingTheAnimals {
     public void shouldFeedCatsTuna() {
         Feeder feeder = new Feeder();
 
-        String food = String.valueOf(feeder.feeds("Cat", false));
+        FoodType food = feeder.feeds("Cat", false);
 
         Assert.assertEquals(FoodType.TUNA, food);
     }
@@ -20,7 +20,7 @@ public class WhenFeedingTheAnimals {
     public void shouldFeedHamstersCabbage() {
         Feeder feeder = new Feeder();
 
-        String food = String.valueOf(feeder.feeds("Hamster", false));
+        FoodType food = feeder.feeds("Hamster", false);
 
         Assert.assertEquals(FoodType.CABBAGE, food);
     }
@@ -29,7 +29,7 @@ public class WhenFeedingTheAnimals {
     public void shouldFeedDogsDogFood() {
         Feeder feeder = new Feeder();
 
-        String food = String.valueOf(feeder.feeds("Dog", false));
+        FoodType food = feeder.feeds("Dog", false);
 
         Assert.assertEquals(FoodType.DOG_FOOD, food);
     }
@@ -38,7 +38,7 @@ public class WhenFeedingTheAnimals {
     public void shouldFeedPremiumCatsPremiumFood() {
         Feeder feeder = new Feeder();
 
-        String food = String.valueOf(feeder.feeds("Cat", true));
+        FoodType food = feeder.feeds("Cat", true);
 
         Assert.assertEquals(FoodType.SALMON, food);
 
